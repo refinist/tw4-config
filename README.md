@@ -1,6 +1,6 @@
 # 🎨 @refinist/tw4-config [![npm](https://img.shields.io/npm/v/@refinist/tw4-config.svg?style=flat&colorA=00a6f4&colorB=030712)](https://npmjs.com/package/@refinist/tw4-config)
 
-A customized Tailwind CSS configuration that provides out-of-the-box mobile and modern web development solutions.
+Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.
 
 > [中文文档](./README.zh.md) | English Documentation
 
@@ -59,6 +59,8 @@ Provides out-of-the-box single-line text ellipsis functionality:
 </div>
 ```
 
+### 💡 More ideas coming soon...
+
 ## 📦 Installation
 
 ```bash
@@ -80,14 +82,14 @@ bun add @refinist/tw4-config
 ### Import in CSS files
 
 ```css
-@import '@refinist/tw4-config/index.css';
+@import '@refinist/tw4-config';
 ```
 
 ### Import in TypeScript/JavaScript files
 
 ```typescript
 // main.ts
-import '@refinist/tw4-config/index.css';
+import '@refinist/tw4-config';
 
 // Your other code
 ```

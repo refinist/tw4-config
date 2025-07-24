@@ -1,2 +1,2 @@
 onlyBuiltDependencies:
-  - lightningcss-cli
+  - esbuild

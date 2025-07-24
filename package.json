@@ -1,7 +1,7 @@
 {
   "name": "@refinist/tw4-config",
   "version": "0.0.0",
-  "description": "Common basic configurations for Tailwind CSS v4",
+  "description": "Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.",
   "homepage": "https://github.com/refinist/tw4-config#readme",
   "bugs": {
     "url": "https://github.com/refinist/tw4-config/issues"
@@ -17,23 +17,26 @@
   ],
   "type": "module",
   "exports": {
-    "./*": "./dist/*",
+    ".": "./dist/index.css",
+    "./index.css": "./dist/index.css",
+    "./index": "./dist/index.css",
     "./package.json": "./package.json"
   },
+  "main": "./dist/index.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "lightningcss --minify src/index.css -o dist/index.css",
+    "build": "esbuild src/index.css --outfile=dist/index.css --minify && node scripts/post-build.js",
     "format": "prettier --write .",
+    "prepublishOnly": "pnpm run build",
     "release": "bumpp && pnpm publish"
   },
   "prettier": "@refinist/prettier-config",
   "devDependencies": {
     "@refinist/prettier-config": "^0.0.4",
     "bumpp": "^10.2.0",
-    "lightningcss": "^1.30.1",
-    "lightningcss-cli": "^1.30.1",
+    "esbuild": "^0.25.8",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.11"
   },

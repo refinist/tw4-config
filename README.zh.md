@@ -1,6 +1,6 @@
 # 🎨 @refinist/tw4-config [![npm](https://img.shields.io/npm/v/@refinist/tw4-config.svg?style=flat&colorA=00a6f4&colorB=030712)](https://npmjs.com/package/@refinist/tw4-config)
 
-一个定制化的 Tailwind CSS 配置，提供开箱即用的移动端和现代 Web 开发解决方案。
+Tailwind CSS v4 配置，提供开箱即用的移动端和现代 Web 开发解决方案。
 
 > 中文文档 | [English Documentation](./README.md)
 
@@ -20,20 +20,20 @@
 - `saib-mb` - 底部安全区域外边距
 - `saib-b` - 底部安全区域定位距离
 
-**⚡ 动态类（支持任意值和预设值）：**
+**⚡ 动态类（支持任意值和裸值）：**
 
-- `saib-pb-*` - 底部内边距 + 安全区域（如：`saib-pb-2`, `saib-pb-[200px]`）
-- `saib-mb-*` - 底部外边距 + 安全区域（如：`saib-mb-2`, `saib-mb-[200px]`）
-- `saib-b-*` - 底部定位 + 安全区域（如：`saib-b-2`, `saib-b-[200px]`）
+- `saib-pb-*` - 底部内边距 + 安全区域，如`saib-pb-2`(`padding-bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-pb-[24px]`
+- `saib-mb-*` - 底部外边距 + 安全区域，如`saib-mb-2`(`margin-bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-mb-[24px]`
+- `saib-b-*` - 底部定位 + 安全区域，如`saib-b-2`(`bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-b-[24px]`
 
 ```html
 <!-- 基础使用 -->
-<div class="saib-pb-2">底部内边距 2px + 安全区域</div>
-<div class="saib-mb-2">底部外边距 2px + 安全区域</div>
-<div class="fixed saib-b-2">底部定位 2px + 安全区域</div>
+<div class="saib-pb-2">底部内边距 8px + 安全区域</div>
+<div class="saib-mb-2">底部外边距 8px + 安全区域</div>
+<div class="fixed saib-b-2">底部定位 8px + 安全区域</div>
 ```
 
-### 🔄 3. 增强的 Flex-1 类
+### 🔄 3. 增强的 flex-1 类
 
 改进了 `flex-1` 类的实现，解决了内部内容宽度/高度过宽导致容器被撑开的问题：
 
@@ -59,6 +59,8 @@
 </div>
 ```
 
+### 💡 更多想法，正在路上...
+
 ## 📦 安装
 
 ```bash
@@ -80,14 +82,14 @@ bun add @refinist/tw4-config
 ### 在 CSS 文件中引入
 
 ```css
-@import '@refinist/tw4-config/index.css';
+@import '@refinist/tw4-config';
 ```
 
 ### 在 TypeScript/JavaScript 文件中引入
 
 ```typescript
 // main.ts
-import '@refinist/tw4-config/index.css';
+import '@refinist/tw4-config';
 
 // 你的其他代码
 ```

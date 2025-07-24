@@ -1,3 +1,4 @@
+/* https://dev.to/mrpaulishaili/vscode-intellisense-broken-in-tailwind-css-v4-heres-the-solution-4d5 */
 @layer theme, base, components, utilities;
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
@@ -7,6 +8,7 @@
   :root {
     --safe-area-inset-bottom-constant: 0.1px;
     --safe-area-inset-bottom-env: 0.1px;
+    --saib-spacing: 0.25rem; /* 4px */
   }
   @supports (bottom: constant(safe-area-inset-bottom)) or
     (bottom: env(safe-area-inset-bottom)) {
@@ -53,199 +55,49 @@
   }
 }
 
-@theme {
-  --saib-pb-size-2: 2px;
-  --saib-pb-size-4: 4px;
-  --saib-pb-size-6: 6px;
-  --saib-pb-size-8: 8px;
-  --saib-pb-size-10: 10px;
-  --saib-pb-size-12: 12px;
-  --saib-pb-size-14: 14px;
-  --saib-pb-size-16: 16px;
-  --saib-pb-size-18: 18px;
-  --saib-pb-size-20: 20px;
-  --saib-pb-size-22: 22px;
-  --saib-pb-size-24: 24px;
-  --saib-pb-size-26: 26px;
-  --saib-pb-size-28: 28px;
-  --saib-pb-size-30: 30px;
-  --saib-pb-size-32: 32px;
-  --saib-pb-size-34: 34px;
-  --saib-pb-size-36: 36px;
-  --saib-pb-size-38: 38px;
-  --saib-pb-size-40: 40px;
-  --saib-pb-size-42: 42px;
-  --saib-pb-size-44: 44px;
-  --saib-pb-size-46: 46px;
-  --saib-pb-size-48: 48px;
-  --saib-pb-size-50: 50px;
-  --saib-pb-size-52: 52px;
-  --saib-pb-size-54: 54px;
-  --saib-pb-size-56: 56px;
-  --saib-pb-size-58: 58px;
-  --saib-pb-size-60: 60px;
-  --saib-pb-size-62: 62px;
-  --saib-pb-size-64: 64px;
-  --saib-pb-size-66: 66px;
-  --saib-pb-size-68: 68px;
-  --saib-pb-size-70: 70px;
-  --saib-pb-size-72: 72px;
-  --saib-pb-size-74: 74px;
-  --saib-pb-size-76: 76px;
-  --saib-pb-size-78: 78px;
-  --saib-pb-size-80: 80px;
-  --saib-pb-size-82: 82px;
-  --saib-pb-size-84: 84px;
-  --saib-pb-size-86: 86px;
-  --saib-pb-size-88: 88px;
-  --saib-pb-size-90: 90px;
-  --saib-pb-size-92: 92px;
-  --saib-pb-size-94: 94px;
-  --saib-pb-size-96: 96px;
-  --saib-pb-size-98: 98px;
-  --saib-pb-size-100: 100px;
-
-  --saib-mb-size-2: 2px;
-  --saib-mb-size-4: 4px;
-  --saib-mb-size-6: 6px;
-  --saib-mb-size-8: 8px;
-  --saib-mb-size-10: 10px;
-  --saib-mb-size-12: 12px;
-  --saib-mb-size-14: 14px;
-  --saib-mb-size-16: 16px;
-  --saib-mb-size-18: 18px;
-  --saib-mb-size-20: 20px;
-  --saib-mb-size-22: 22px;
-  --saib-mb-size-24: 24px;
-  --saib-mb-size-26: 26px;
-  --saib-mb-size-28: 28px;
-  --saib-mb-size-30: 30px;
-  --saib-mb-size-32: 32px;
-  --saib-mb-size-34: 34px;
-  --saib-mb-size-36: 36px;
-  --saib-mb-size-38: 38px;
-  --saib-mb-size-40: 40px;
-  --saib-mb-size-42: 42px;
-  --saib-mb-size-44: 44px;
-  --saib-mb-size-46: 46px;
-  --saib-mb-size-48: 48px;
-  --saib-mb-size-50: 50px;
-  --saib-mb-size-52: 52px;
-  --saib-mb-size-54: 54px;
-  --saib-mb-size-56: 56px;
-  --saib-mb-size-58: 58px;
-  --saib-mb-size-60: 60px;
-  --saib-mb-size-62: 62px;
-  --saib-mb-size-64: 64px;
-  --saib-mb-size-66: 66px;
-  --saib-mb-size-68: 68px;
-  --saib-mb-size-70: 70px;
-  --saib-mb-size-72: 72px;
-  --saib-mb-size-74: 74px;
-  --saib-mb-size-76: 76px;
-  --saib-mb-size-78: 78px;
-  --saib-mb-size-80: 80px;
-  --saib-mb-size-82: 82px;
-  --saib-mb-size-84: 84px;
-  --saib-mb-size-86: 86px;
-  --saib-mb-size-88: 88px;
-  --saib-mb-size-90: 90px;
-  --saib-mb-size-92: 92px;
-  --saib-mb-size-94: 94px;
-  --saib-mb-size-96: 96px;
-  --saib-mb-size-98: 98px;
-  --saib-mb-size-100: 100px;
-
-  --saib-b-size-2: 2px;
-  --saib-b-size-4: 4px;
-  --saib-b-size-6: 6px;
-  --saib-b-size-8: 8px;
-  --saib-b-size-10: 10px;
-  --saib-b-size-12: 12px;
-  --saib-b-size-14: 14px;
-  --saib-b-size-16: 16px;
-  --saib-b-size-18: 18px;
-  --saib-b-size-20: 20px;
-  --saib-b-size-22: 22px;
-  --saib-b-size-24: 24px;
-  --saib-b-size-26: 26px;
-  --saib-b-size-28: 28px;
-  --saib-b-size-30: 30px;
-  --saib-b-size-32: 32px;
-  --saib-b-size-34: 34px;
-  --saib-b-size-36: 36px;
-  --saib-b-size-38: 38px;
-  --saib-b-size-40: 40px;
-  --saib-b-size-42: 42px;
-  --saib-b-size-44: 44px;
-  --saib-b-size-46: 46px;
-  --saib-b-size-48: 48px;
-  --saib-b-size-50: 50px;
-  --saib-b-size-52: 52px;
-  --saib-b-size-54: 54px;
-  --saib-b-size-56: 56px;
-  --saib-b-size-58: 58px;
-  --saib-b-size-60: 60px;
-  --saib-b-size-62: 62px;
-  --saib-b-size-64: 64px;
-  --saib-b-size-66: 66px;
-  --saib-b-size-68: 68px;
-  --saib-b-size-70: 70px;
-  --saib-b-size-72: 72px;
-  --saib-b-size-74: 74px;
-  --saib-b-size-76: 76px;
-  --saib-b-size-78: 78px;
-  --saib-b-size-80: 80px;
-  --saib-b-size-82: 82px;
-  --saib-b-size-84: 84px;
-  --saib-b-size-86: 86px;
-  --saib-b-size-88: 88px;
-  --saib-b-size-90: 90px;
-  --saib-b-size-92: 92px;
-  --saib-b-size-94: 94px;
-  --saib-b-size-96: 96px;
-  --saib-b-size-98: 98px;
-  --saib-b-size-100: 100px;
-}
-
 @utility saib-pb-* {
-  /* any value */
+  /* Arbitrary values */
   padding-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
   padding-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
 
-  /* theme value */
+  /* Bare values */
   padding-bottom: calc(
-    --value(--saib-pb-size-*) + var(--safe-area-inset-bottom-constant)
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
   );
   padding-bottom: calc(
-    --value(--saib-pb-size-*) + var(--safe-area-inset-bottom-env)
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
   );
 
   box-sizing: border-box;
 }
 
 @utility saib-mb-* {
-  /* any value */
+  /* Arbitrary values */
   margin-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
   margin-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
 
-  /* theme value */
+  /* Bare values */
   margin-bottom: calc(
-    --value(--saib-pb-size-*) + var(--safe-area-inset-bottom-constant)
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
   );
   margin-bottom: calc(
-    --value(--saib-pb-size-*) + var(--safe-area-inset-bottom-env)
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
   );
 }
 
 @utility saib-b-* {
-  /* any value */
+  /* Arbitrary values */
   bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
   bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
 
-  /* theme value */
+  /* Bare values */
   bottom: calc(
-    --value(--saib-b-size-*) + var(--safe-area-inset-bottom-constant)
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
   );
-  bottom: calc(--value(--saib-b-size-*) + var(--safe-area-inset-bottom-env));
+  bottom: calc(
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
+  );
 }
