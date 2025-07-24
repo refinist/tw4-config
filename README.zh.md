@@ -1,4 +1,6 @@
-# 🎨 @refinist/tw4-config [![npm](https://img.shields.io/npm/v/@refinist/tw4-config.svg?style=flat&colorA=00a6f4&colorB=030712)](https://npmjs.com/package/@refinist/tw4-config)
+# 🎨 @refinist/tw4-config
+
+[![npm](https://img.shields.io/npm/v/@refinist/tw4-config.svg?labelColor=00bcff&color=000000)](https://npmjs.com/package/@refinist/tw4-config) [![size](https://img.badgesize.io/https://unpkg.com/@refinist/tw4-config?compression=gzip&labelColor=00bcff&color=000000)](https://unpkg.com/@refinist/tw4-config)
 
 Tailwind CSS v4 配置，提供开箱即用的移动端和现代 Web 开发解决方案。
 
