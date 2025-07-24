@@ -4,7 +4,7 @@
 
 Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.
 
-> [中文文档](./README.zh.md) | English Documentation
+> English Documentation | [中文文档](./README.zh.md)
 
 ## ✨ Features
 

@@ -4,7 +4,7 @@
 
 Tailwind CSS v4 配置，提供开箱即用的移动端和现代 Web 开发解决方案。
 
-> 中文文档 | [English Documentation](./README.md)
+> [English Documentation](./README.md) | 中文文档
 
 ## ✨ 特性
 
