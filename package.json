@@ -3,19 +3,14 @@
   "version": "0.0.1",
   "description": "Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.",
   "keywords": [
-    "tailwindcss",
     "tailwind",
+    "tailwindcss",
+    "tailwindcss-v4",
     "css",
     "config",
-    "configuration",
     "mobile",
     "safe-area",
-    "responsive",
-    "utilities",
-    "flex",
-    "ellipsis",
-    "tw4",
-    "v4"
+    "flex"
   ],
   "homepage": "https://github.com/refinist/tw4-config#readme",
   "bugs": {
