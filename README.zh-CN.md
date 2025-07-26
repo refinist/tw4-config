@@ -81,19 +81,15 @@ bun add @refinist/tw4-config
 
 ## 🚀 使用
 
-### 在 CSS 文件中引入
-
 ```css
 @import '@refinist/tw4-config';
 ```
 
-### 在 TypeScript/JavaScript 文件中引入
+考虑到很多 UI 框架都有自己的 `reset` 样式，所以没有引入 `Preflight`，如果你需要使用 `Preflight`，请自行引入 👇
 
-```typescript
-// main.ts
-import '@refinist/tw4-config';
-
-// 你的其他代码
+```css
+@import '@refinist/tw4-config';
+@import 'tailwindcss/preflight.css' layer(base);
 ```
 
 ## 🌍 兼容性说明

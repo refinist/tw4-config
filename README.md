@@ -4,7 +4,7 @@
 
 Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.
 
-> English Documentation | [中文文档](./README.zh.md)
+> English Documentation | [中文文档](./README.zh-CN.md)
 
 ## ✨ Features
 
@@ -24,9 +24,9 @@ Provides complete safe-area-inset-bottom solutions, compatible with both Android
 
 **⚡ Dynamic Classes (supports arbitrary values and preset values):**
 
-- `saib-pb-*` - Bottom padding + safe area (e.g., `saib-pb-2`, `saib-pb-[200px]`)
-- `saib-mb-*` - Bottom margin + safe area (e.g., `saib-mb-2`, `saib-mb-[200px]`)
-- `saib-b-*` - Bottom positioning + safe area (e.g., `saib-b-2`, `saib-b-[200px]`)
+- `saib-pb-*` - Bottom padding + safe area, e.g., `saib-pb-2` (`padding-bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-pb-[24px]`
+- `saib-mb-*` - Bottom margin + safe area, e.g., `saib-mb-2` (`margin-bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-mb-[24px]`
+- `saib-b-*` - Bottom positioning + safe area, e.g., `saib-b-2` (`bottom: calc(var(--saib-spacing) * 2) /* 0.5rem = 8px */`), `saib-b-[24px]`
 
 ```html
 <!-- Basic usage -->
@@ -81,19 +81,15 @@ bun add @refinist/tw4-config
 
 ## 🚀 Usage
 
-### Import in CSS files
-
 ```css
 @import '@refinist/tw4-config';
 ```
 
-### Import in TypeScript/JavaScript files
+Since many UI frameworks have their own `reset` styles, `Preflight` is not included by default. If you need to use `Preflight`, please import it yourself: 👇
 
-```typescript
-// main.ts
-import '@refinist/tw4-config';
-
-// Your other code
+```css
+@import '@refinist/tw4-config';
+@import 'tailwindcss/preflight.css' layer(base);
 ```
 
 ## 🌍 Compatibility

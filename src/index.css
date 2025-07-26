@@ -1,6 +1,6 @@
-/* https://dev.to/mrpaulishaili/vscode-intellisense-broken-in-tailwind-css-v4-heres-the-solution-4d5 */
 @layer theme, base, components, utilities;
 @import 'tailwindcss/theme.css' layer(theme);
+/* https://tailwindcss.com/docs/preflight#disabling-preflight */
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @layer theme {
