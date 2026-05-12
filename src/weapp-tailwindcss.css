@@ -1,0 +1,79 @@
+@theme {
+  --safe-area-inset-bottom-constant: constant(safe-area-inset-bottom);
+  --safe-area-inset-bottom-env: env(safe-area-inset-bottom, 0.1px);
+  --saib-spacing: 0.25rem; /* 4px */
+}
+
+/* flex-1 improvement */
+.flex-1 {
+  flex: 1;
+  min-width: 0;
+}
+.flex-col > .flex-1 {
+  min-width: auto;
+  min-height: 0;
+}
+
+/* safe-area-inset-bottom mobile safe area bottom padding */
+@utility saib-pb {
+  padding-bottom: var(--safe-area-inset-bottom-constant);
+  padding-bottom: var(--safe-area-inset-bottom-env);
+  box-sizing: border-box;
+}
+
+@utility saib-mb {
+  margin-bottom: var(--safe-area-inset-bottom-constant);
+  margin-bottom: var(--safe-area-inset-bottom-env);
+}
+
+@utility saib-b {
+  bottom: var(--safe-area-inset-bottom-constant);
+  bottom: var(--safe-area-inset-bottom-env);
+}
+
+@utility saib-pb-* {
+  /* Arbitrary values */
+  padding-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
+  padding-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
+
+  /* Bare values */
+  padding-bottom: calc(
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
+  );
+  padding-bottom: calc(
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
+  );
+
+  box-sizing: border-box;
+}
+
+@utility saib-mb-* {
+  /* Arbitrary values */
+  margin-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
+  margin-bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
+
+  /* Bare values */
+  margin-bottom: calc(
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
+  );
+  margin-bottom: calc(
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
+  );
+}
+
+@utility saib-b-* {
+  /* Arbitrary values */
+  bottom: calc(--value([*]) + var(--safe-area-inset-bottom-constant));
+  bottom: calc(--value([*]) + var(--safe-area-inset-bottom-env));
+
+  /* Bare values */
+  bottom: calc(
+    var(--saib-spacing) * --value(integer) +
+      var(--safe-area-inset-bottom-constant)
+  );
+  bottom: calc(
+    var(--saib-spacing) * --value(integer) + var(--safe-area-inset-bottom-env)
+  );
+}

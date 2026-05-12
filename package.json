@@ -1,11 +1,13 @@
 {
   "name": "@refinist/tw4-config",
   "version": "0.0.3",
-  "description": "Tailwind CSS v4 configuration, providing out-of-the-box mobile and modern web development solutions.",
+  "description": "Tailwind CSS v4 utility preset for mobile and modern web development.",
   "keywords": [
     "tailwind",
     "tailwindcss",
     "tailwindcss-v4",
+    "weapp-tailwindcss",
+    "weapp",
     "css",
     "config",
     "mobile",
@@ -21,7 +23,7 @@
     "url": "git+https://github.com/refinist/tw4-config.git"
   },
   "license": "MIT",
-  "author": "Jeff Wang",
+  "author": "REFINIST",
   "sideEffects": [
     "*.css"
   ],
@@ -30,6 +32,8 @@
     ".": "./dist/index.css",
     "./index.css": "./dist/index.css",
     "./index": "./dist/index.css",
+    "./weapp-tailwindcss.css": "./dist/weapp-tailwindcss.css",
+    "./weapp-tailwindcss": "./dist/weapp-tailwindcss.css",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.css",
@@ -37,7 +41,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "esbuild src/index.css --outfile=dist/index.css --minify && node scripts/post-build.js",
+    "build": "esbuild src/index.css src/weapp-tailwindcss.css --outdir=dist --minify",
     "format": "prettier --write .",
     "prepublishOnly": "pnpm run build",
     "release": "bumpp && pnpm publish"
@@ -51,7 +55,13 @@
     "tailwindcss": "^4.1.11"
   },
   "peerDependencies": {
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "weapp-tailwindcss": "^4.12.0"
+  },
+  "peerDependenciesMeta": {
+    "weapp-tailwindcss": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@10.13.1",
   "engines": {

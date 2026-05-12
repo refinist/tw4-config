@@ -1,8 +1,3 @@
-@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-/* https://tailwindcss.com/docs/preflight#disabling-preflight */
-@import 'tailwindcss/utilities.css' layer(utilities);
-
 @layer theme {
   /* Custom safe area variables (do not set to 0, otherwise the calc calculation will be incorrect). Mainly to be compatible with Android devices that do not have the safe-area-inset-bottom variable. Because Android devices do not have the safe-area-inset-bottom variable, it will be 0, which will cause the calc calculation to be incorrect. */
   :root {
@@ -28,13 +23,6 @@
   .flex-col > .flex-1 {
     min-width: auto;
     min-height: 0;
-  }
-
-  /* Text overflow ellipsis aggregation */
-  .text-overflow-ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   /* safe-area-inset-bottom mobile safe area bottom padding */
