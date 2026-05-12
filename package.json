@@ -1,6 +1,6 @@
 {
   "name": "@refinist/tw4-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tailwind CSS v4 utility preset for mobile and modern web development.",
   "keywords": [
     "tailwind",
